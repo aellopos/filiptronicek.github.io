@@ -1,9 +1,4 @@
 {% include header.html %}
-<link
-   rel="stylesheet"
-   href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-/>
-
 {% if site.layout == 'stacked' %}
 <div class="container-lg py-6 p-responsive text-center">
   {% include masthead.html metadata=true %}
@@ -46,36 +41,7 @@
       {% unless posts_total == 0 %}
       {% include thoughts.html %}
       {% endunless %}
-
-      {% include projects.html %} 
-
-      {% if site.topics %}
-      {% include interests.html %}
-      {% endif %}
-
-<!-- Include the calendar library. -->
-<script
-  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
-></script>
-
-
-<!-- Prepare a container for your calendar. -->
-<h2>GitHub activity</h2>
-<br>
-
-<div class="calendar">
-    <!-- Loading stuff -->
-    Loading stuff.... client-side rendering sucks
-</div>
-<br>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    GitHubCalendar(".calendar", "filiptronicek", { responsive: true });
-
-  location.href = "https://tronicek.now.sh/";
-</script>
-
+      
     </div>
   </div>
 </div>
